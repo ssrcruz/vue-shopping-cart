@@ -27,17 +27,17 @@
 
     computed: {
       products () {
-        return this.$store.getters.availableProducts
+        return this.$store.state.products
+      },
+      
+      productIsInStock () {
+        return this.$store.getters.productIsInStock
       }
     },
 
     methods: {
       addProductToCart (product) {
         this.$store.dispatch('addProductToCart', product)
-      },
-
-      productIsInStock () {
-        return this.$store.getters.productIsInStock
       }
     },
 

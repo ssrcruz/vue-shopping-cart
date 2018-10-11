@@ -32,7 +32,7 @@ export default new Vuex.Store({
       return getters.cartProducts.reduce((total, product) => total + product.price * product.quantity, 0)
     },
 
-    productIsInStock () {
+    productIsInStock (product) {
       return (product) => {
         return product.inventory > 0
       }
