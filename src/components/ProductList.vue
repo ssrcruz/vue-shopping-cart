@@ -30,7 +30,7 @@
 
     computed: {
       ...mapState({ // mapState is useful to create new objects based on existing ones
-        products: state => state.products
+        products: state => state.products.items
       }),
 
       ...mapGetters({
